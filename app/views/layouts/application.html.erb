@@ -7,13 +7,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/04806abca7.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <header>
-      <h3><%= link_to 'Wikinimous', articles_path %></h3>
+    <nav class='navbar navbar-light bg-light border-bottom'>
+      <h5 class="navbar-brand"><%= link_to 'Wikinimous', articles_path %></h5>
       <p><%= link_to 'New Article', new_article_path %></p>
-    </header>
-    <%= yield %>
+    </nav>
+    <div class='container my-5'>
+      <%= yield %>
+    </div>
   </body>
 </html>

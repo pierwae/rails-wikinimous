@@ -1,7 +1,8 @@
-<div>
+<div class="row">
   <h1><%= @article.title %></h1>
-  <p><%= link_to 'Edit', edit_article_path(@article) %></p>
-  <p><%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  <p class="align-text-top"><%= link_to sanitize('<i class="fas fa-pencil-alt"></i>'), edit_article_path(@article) %></p>
+  <p><%= link_to sanitize('<i class="fas fa-trash-alt"></i>'), article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></p>
 </div>
 
 <p><%= @article.content %></p>
+

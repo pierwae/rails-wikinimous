@@ -1,7 +1,10 @@
-<%= form_for(article) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-  <%= f.submit %>
+<%= simple_form_for(article) do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :title, input_html: { class: 'special' }%>
+
+    <%= f.input :content %>
+
+    <%= f.submit class: "btn btn-primary button" %>
 <% end %>
+
